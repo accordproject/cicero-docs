@@ -17,6 +17,16 @@ web, middleware, SaaS, on-blockchain execution and off-blockchain execution. The
 and the engine are designed to integrate into a traditional DevOps practices and CI/CD, including
 unit and system testing and code coverage analysis.
 
+Getting Involved
+================
+
+Cicero is an Open Source, community led project. Please join the Accord Technology Working Group Slack
+channel by visiting http://accordproject.org.
+
+GitHub repository: https://github.com/accordproject/cicero
+
+Discussion of issues, feature requests and pull requests are all very welcome!
+
 License 
 -------
 
