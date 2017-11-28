@@ -1,9 +1,0 @@
-Creating a Template
-===================
-
-Features
---------
-
-- Be awesome
-- Make things faster
-
