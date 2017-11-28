@@ -18,12 +18,24 @@ Accord Project Cicero Documentation
    :caption: Concepts
 
    concepts
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Tutorials
+
+   tutorial_001
 
 .. toctree::
    :maxdepth: 2
    :caption: Tasks
 
    tasks
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Reference
+
+   cli
 
 Indices and tables
 ==================
