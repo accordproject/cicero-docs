@@ -7,6 +7,8 @@ A template is composed of three elements:
 - Template Model, the data model that backs the template 
 - Logic, the executable business logic for the template
 
+.. image:: images/template.png
+
 When combined these three elements allow templates to be edited, analyzed, queried and executed.
 
 A complete sample template is available here:
@@ -153,3 +155,5 @@ Engine
 Cicero includes a Node.js VM based execution engine. The engine routes incoming transactions to template functions,
 performs data validation, executes the functions within a sandboxed environment, and then validates the response
 before returning it to the caller.
+
+.. image:: images/execution_content.png
