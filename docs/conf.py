@@ -117,7 +117,7 @@ html_theme = 'default'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = accord_logo.png
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -176,7 +176,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ReadtheDocsTemplatedoc'
+htmlhelp_basename = 'CiceroDocs'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -196,13 +196,13 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ReadtheDocsTemplate.tex', u'Accord Project Cicero Documentation',
-   u'Read the Docs', 'manual'),
+  ('index', 'CiceroDocs.tex', u'Accord Cicero Documentation',
+   u'Accord', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = accord_logo.png
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -226,8 +226,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'readthedocstemplate', u'Accord Project Cicero Documentation',
-     [u'Read the Docs'], 1)
+    ('index', 'cicerodocs', u'Accord Cicero Documentation',
+     [u'Accord'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -240,8 +240,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'ReadtheDocsTemplate', u'Accord Project Cicero Documentation',
-   u'Read the Docs', 'ReadtheDocsTemplate', 'One line description of project.',
+  ('index', 'CiceroDocs', u'Accord Cicero Documentation',
+   u'Accord', 'CiceroDocs', 'Legal templates, clauses and execution',
    'Miscellaneous'),
 ]
 
