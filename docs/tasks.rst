@@ -9,8 +9,20 @@ Instantiate a Clause
 Create a Template
 =============================
 
-- Be awesome
-- Make things faster
+Structure
+---------
+
+Grammar
+-------
+
+Model
+-----
+
+Logic
+-----
+
+Unit Tests
+----------
 
 =============================
 Add a Template to a Library
@@ -20,29 +32,29 @@ Add a Template to a Library
 - Make things faster
 
 =============================
-Execute a Clause (CLI)
+Executing a Clause
 =============================
 
 - Be awesome
 - Make things faster
 
-=============================
-Execute a Clause (Node.js)
-=============================
+Command Line Interface
+-----------------------
+
+Node.js
+-------
 
 - Be awesome
 - Make things faster
 
-========================================
-Execute a Clause (Hyperledger Composer)
-========================================
+Hyperledger Composer
+---------------------
 
 - Be awesome
 - Make things faster
 
-==========================================
-Execute a Clause (Hyperledger Fabric 1.1)
-==========================================
+Hyperledger Fabric 1.1
+-----------------------
 
 - Be awesome
 - Make things faster

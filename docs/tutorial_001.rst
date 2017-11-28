@@ -1,4 +1,4 @@
-Tutorial 001 : Quick Start
+Tutorial 1 : Quick Start
 ===========================
 
 Using an existing Template
@@ -12,7 +12,7 @@ installed simply ``git clone`` the repository::
 
     git clone https://github.com/accordproject/cicero-template-library
 
- .. _`download the latest release archive`: https://github.com/accordproject/cicero-template-library/releases
+.. _`download the latest release archive`: https://github.com/accordproject/cicero-template-library/releases
 
 Parse 
 ^^^^^^
@@ -66,9 +66,13 @@ Commands::
     cd cicero-template-library 
     cicero execute --template ./helloworld/ --dsl ./helloworld/sample.txt --data ./helloworld/data.json
 
-The results of execution (a JSON serialized object) are displayed. They include: * Details of the
-clause executed (name, version, SHA256 hash of clause data) * The incoming request object * The
-output response object::
+The results of execution (a JSON serialized object) are displayed. They include: 
+
+* Details of the clause executed (name, version, SHA256 hash of clause data)
+* The incoming request object 
+* The output response object
+
+Example::
 
     {
         "clause":"helloworld@0.0.3-c8d9e40fe7c5a479d1a80bce2d2fdc3c8a240ceb44a031d38cbd619e9b795b60",
@@ -93,7 +97,7 @@ Now that you have executed an existing template, let's create a new template.
           start by forking_ the ``cicero-template-library`` project on GitHub. This will make it easy 
           for you to submit a pull request to get your new template added to the library.
 
-:: _forking: https://help.github.com/articles/fork-a-repo/
+.. _forking: https://help.github.com/articles/fork-a-repo/
 
 Install the template generator::
 
@@ -103,7 +107,7 @@ Run the template generator::
 
     yo cicero-template
 
-.. note:: If you have forked the `cicero-template-library` cd into that directory first.
+.. note:: If you have forked the ``cicero-template-library`` cd into that directory first.
 
 Give your generator a name (no spaces) and then supply a namespace for your template model (again,
 no spaces). The generator will then create the files and directories required for a basic template
