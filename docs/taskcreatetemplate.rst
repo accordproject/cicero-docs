@@ -1,5 +1,5 @@
-Creating a Template
-===================
+Create a Template
+=================
 
 Features
 --------
