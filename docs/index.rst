@@ -10,11 +10,22 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :glob:
+   :caption: Getting Started
 
-   *
+   readme
+   installation
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Concepts
 
+   concepts
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tasks
+
+   tasks
 
 Indices and tables
 ==================

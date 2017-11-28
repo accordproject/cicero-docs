@@ -1,4 +1,0 @@
-Authors
--------
-
-* Dan Selman (Clause)
