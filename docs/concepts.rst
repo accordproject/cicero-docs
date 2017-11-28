@@ -85,13 +85,15 @@ incoming requests and responses are modeled types.
 
 Here is a sample JavaScript function::
 
-    /** * Execute the smart clause * @param {Context} context - the Accord
-    context * @param
-    {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest}
-    context.request - the incoming request * @param
-    {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse}
-    context.response - the response * @AccordClauseLogic */ function
-    execute(context) {
+    /** 
+    * Execute the smart clause 
+    * @param {Context} context - the Accord context 
+    * @param {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest}
+    * context.request - the incoming request 
+    * @param {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse}
+    * context.response - the response * @AccordClauseLogic 
+    */
+    function execute(context) {
 
         logger.info(context); var req = context.request; var res =
         context.response; var data = context.data; var now =
