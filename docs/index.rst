@@ -6,8 +6,6 @@
 Accord Project Cicero Documentation
 ===================================
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
@@ -31,6 +29,5 @@ Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
 

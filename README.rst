@@ -1,12 +1,8 @@
-What is Cicero?
-===============
+=================
+Business Problem
+=================
 
 TBD.
-
-Tasks
------
-
-
 
 License
 -------
