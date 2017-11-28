@@ -36,6 +36,7 @@ Accord Project Cicero Documentation
    :caption: Reference
 
    cli
+   api/*
 
 Indices and tables
 ==================
