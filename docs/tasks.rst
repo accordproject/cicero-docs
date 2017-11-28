@@ -32,7 +32,7 @@ Add a Template to a Library
 - Make things faster
 
 =============================
-Executing a Clause
+Executing a Smart Clause™
 =============================
 
 - Be awesome
