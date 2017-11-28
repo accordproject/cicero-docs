@@ -7,11 +7,12 @@ Using an existing Template
 Download the Template
 ^^^^^^^^^^^^^^^^^^^^^^
 
-You can either [download the latest release
-archive](https://github.com/accordproject/cicero-template-library/releases) or if you have ``git``
+You can either `download the latest release archive`_ or if you have ``git``
 installed simply ``git clone`` the repository::
 
     git clone https://github.com/accordproject/cicero-template-library
+
+ .. _`download the latest release archive`: https://github.com/accordproject/cicero-template-library/releases
 
 Parse 
 ^^^^^^
@@ -44,7 +45,7 @@ Output::
 
     { Error: invalid syntax at line 1 col 1:
     FUBAR  Name of the person to greet: "Dan". 
-    ^ Unexpected "F" ```
+    ^ Unexpected "F"
 
 Execute
 ^^^^^^^^
@@ -53,13 +54,15 @@ Use the ``cicero execute`` command to load a template from a directory on disk,
 instantiate a clause based on input text, and then invoke the clause using an incoming JSON
 payload.
 
-data.json:: 
+data.json::
+
     {
-    "$class": "io.clause.helloworld.Request", "input": "World"
+        "$class": "io.clause.helloworld.Request", "input": "World"
     }
 
 
 Commands::
+
     cd cicero-template-library 
     cicero execute --template ./helloworld/ --dsl ./helloworld/sample.txt --data ./helloworld/data.json
 
@@ -68,14 +71,15 @@ clause executed (name, version, SHA256 hash of clause data) * The incoming reque
 output response object::
 
     {
-    "clause":"helloworld@0.0.3-c8d9e40fe7c5a479d1a80bce2d2fdc3c8a240ceb44a031d38cbd619e9b795b60",
-    "request":{
-        "$class":"io.clause.helloworld.Request", "input":"World"
-    }, "response":{
-        "$class":"io.clause.helloworld.Response", "output":"Hello Dan World",
-        "transactionId":"cf1dabb5-d604-4ffa-8a87-8333e77a735a",
-        "timestamp":"2017-10-31T10:47:42.055Z"
-    }
+        "clause":"helloworld@0.0.3-c8d9e40fe7c5a479d1a80bce2d2fdc3c8a240ceb44a031d38cbd619e9b795b60",
+        "request":{
+            "$class":"io.clause.helloworld.Request", "input":"World"
+        }, 
+        "response":{
+            "$class":"io.clause.helloworld.Response", "output":"Hello Dan World",
+            "transactionId":"cf1dabb5-d604-4ffa-8a87-8333e77a735a",
+            "timestamp":"2017-10-31T10:47:42.055Z"
+        }
     }
 
 Note that in the response data from the template has been combined with data from the request.
@@ -86,9 +90,10 @@ Creating a New Template
 Now that you have executed an existing template, let's create a new template. 
 
 .. note:: If you would like to contribute your template back into the `cicero-template-library` please
-          start by [forking](https://help.github.com/articles/fork-a-repo/) the `cicero-template-library`
-          project on GitHub. This will make it easy for you to submit a pull request to get your new template
-          added to the library.
+          start by forking_ the ``cicero-template-library`` project on GitHub. This will make it easy 
+          for you to submit a pull request to get your new template added to the library.
+
+:: _forking: https://help.github.com/articles/fork-a-repo/
 
 Install the template generator::
 
@@ -117,6 +122,7 @@ Edit the Template Model
 All of the variables referenced in your template grammar must exist in your template model. Edit
 the file ``models/model.cto`` to include all your variables. The `Hyperledger Composer Modeling Language`_ primitive data types
 are:
+
 - String 
 - Long 
 - Integer 
