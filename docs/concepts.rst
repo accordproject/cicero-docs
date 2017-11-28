@@ -1,9 +1,11 @@
 Template 
 ========
 
-A template is composed of three elements: - Template Grammar, the natural language text for the
-template - Template Model, the data model that backs the template - Logic, the executable business
-logic for the template
+A template is composed of three elements: 
+
+- Template Grammar, the natural language text for the template 
+- Template Model, the data model that backs the template 
+- Logic, the executable business logic for the template
 
 When combined these three elements allow templates to be edited, analyzed, queried and executed.
 
@@ -18,7 +20,15 @@ UTF-8 text with markup to introduce named variables.
 
 Here is a simple template grammar::
 
-   Late Delivery and Penalty. In case of delayed delivery[{" except for Force Majeure cases,":? forceMajeure}] the Seller shall pay to the Buyer for every [{penaltyDuration}] of delay penalty amounting to [{penaltyPercentage}]% of the total value of the Equipment whose delivery has been delayed. Any fractional part of a [{fractionalPart}] is to be considered a full [{fractionalPart}]. The total amount of penalty shall not however, exceed [{capPercentage}]% of the total value of the Equipment involved in late delivery. If the delay is more than [{termination}], the Buyer is entitled to terminate this Contract.
+   Late Delivery and Penalty. In case of delayed delivery[{" except for Force
+   Majeure cases,":? forceMajeure}] the Seller shall pay to the Buyer for every
+   [{penaltyDuration}] of delay penalty amounting to [{penaltyPercentage}]% of
+   the total value of the Equipment whose delivery has been delayed. Any
+   fractional part of a [{fractionalPart}] is to be considered a full
+   [{fractionalPart}]. The total amount of penalty shall not however, exceed
+   [{capPercentage}]% of the total value of the Equipment involved in late
+   delivery. If the delay is more than [{termination}], the Buyer is entitled to
+   terminate this Contract.
 
 Variables in template grammars are enclosed in ``[{`` and ``}]``.
 
@@ -75,52 +85,44 @@ incoming requests and responses are modeled types.
 
 Here is a sample JavaScript function::
 
-    /**
-    * Execute the smart clause
-    * @param {Context} context - the Accord context
-    * @param {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest} context.request - the incoming request
-    * @param {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse} context.response - the response
-    * @AccordClauseLogic
-    */
-    function execute(context) {
+    /** * Execute the smart clause * @param {Context} context - the Accord
+    context * @param
+    {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyRequest}
+    context.request - the incoming request * @param
+    {io.clause.latedeliveryandpenalty.LateDeliveryAndPenaltyResponse}
+    context.response - the response * @AccordClauseLogic */ function
+    execute(context) {
 
-        logger.info(context);
-        var req = context.request;
-        var res = context.response;
-        var data = context.data;
-        var now = moment(req.timestamp);
-        var agreed = moment(req.agreedDelivery);
+        logger.info(context); var req = context.request; var res =
+        context.response; var data = context.data; var now =
+        moment(req.timestamp); var agreed = moment(req.agreedDelivery);
 
-        res.buyerMayTerminate = false;
-        res.penalty = 0;
+        res.buyerMayTerminate = false; res.penalty = 0;
 
         if (req.forceMajeure) {
-            logger.info('forceMajeure');
-            res.buyerMayTerminate = true;
+            logger.info('forceMajeure'); res.buyerMayTerminate = true;
         }
 
         if (!req.forceMajeure && now.isAfter(agreed)) {
-            logger.info('late');
-            logger.info('penalty duration unit: ' + data.penaltyDuration.unit);
-            logger.info('penalty duration amount: ' + data.penaltyDuration.amount);
-            // the delivery is late
-            var diff = now.diff(agreed, data.penaltyDuration.unit);
-            logger.info('diff:' + diff);
+            logger.info('late'); logger.info('penalty duration unit: ' +
+            data.penaltyDuration.unit); logger.info('penalty duration amount: '
+            + data.penaltyDuration.amount); // the delivery is late var diff =
+            now.diff(agreed, data.penaltyDuration.unit); logger.info('diff:' +
+            diff);
 
-            var penalty = (diff / data.penaltyDuration.amount) * data.penaltyPercentage/100 * req.goodsValue;
+            var penalty = (diff / data.penaltyDuration.amount) *
+            data.penaltyPercentage/100 * req.goodsValue;
 
-            // cap the maximum penalty
-            if (penalty > data.capPercentage/100 * req.goodsValue) {
-                logger.info('capped.');
-                penalty = data.capPercentage/100 * req.goodsValue;
+            // cap the maximum penalty if (penalty > data.capPercentage/100 *
+            req.goodsValue) {
+                logger.info('capped.'); penalty = data.capPercentage/100 *
+                req.goodsValue;
             }
 
             res.penalty = penalty;
 
-            // can we terminate?
-            if (diff > data.termination) {
-                logger.info('buyerMayTerminate.');
-                res.buyerMayTerminate = true;
+            // can we terminate? if (diff > data.termination) {
+                logger.info('buyerMayTerminate.'); res.buyerMayTerminate = true;
             }
         }
     }
