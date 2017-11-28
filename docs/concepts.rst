@@ -156,4 +156,4 @@ Cicero includes a Node.js VM based execution engine. The engine routes incoming 
 performs data validation, executes the functions within a sandboxed environment, and then validates the response
 before returning it to the caller.
 
-.. image:: images/execution_content.png
+.. image:: images/execution_context.png
