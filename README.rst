@@ -1,5 +1,5 @@
-Goals 
-=====
+Introduction 
+============
 
 Cicero templates bind legally enforceable natural language text to executable business logic. They
 provide the foundational technology for legal professionals to formalise a set of legally
@@ -18,7 +18,7 @@ and the engine are designed to integrate into a traditional DevOps practices and
 unit and system testing and code coverage analysis.
 
 Getting Involved
-================
+----------------
 
 Cicero is an Open Source, community led project. Please join the Accord Technology Working Group Slack
 channel by visiting http://accordproject.org.
