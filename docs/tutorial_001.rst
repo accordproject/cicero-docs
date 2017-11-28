@@ -101,7 +101,8 @@ Now that you have executed an existing template, let's create a new template.
 
 Install the template generator::
 
-    npm install -g yo npm install -g generator-cicero-template
+    npm install -g yo 
+    npm install -g generator-cicero-template
 
 Run the template generator::
 

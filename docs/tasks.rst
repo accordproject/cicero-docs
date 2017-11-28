@@ -27,20 +27,63 @@ directly (by calling ``setData``)::
 Create a Template
 =============================
 
+The easiest way to create a new template is to use the template generator::
+
+        yo cicero-template
+
+The template generator will create a basic template with the required files and structure.
+
 Structure
 ---------
+
+Layout:
+
+package.json
+    Metadata for the template (name, version, description etc)
+
+README.md
+    A markdown file that describes the purpose and correct usage for the template
+
+data.json (optional)
+    A sample valid request transaction for the template
+
+sample.txt (optional)
+    A sample of DSL text that is valid for the template
+
+grammar/template.tem
+    The default template grammar for the template
+
+models/
+    A collection of Hyperledger Composer model files for the template. They define the Template Model
+    and the Request and Response transactions.
+
+lib/
+    A collection of ES 2015 JavaScript files that implement the business logic for the template
+
+test/
+    A collection of unit tests for the template
 
 Grammar
 -------
 
+Please refer to the Concepts documentation.
+
 Model
 -----
+
+Please refer to the Concepts documentation.
 
 Logic
 -----
 
+Please refer to the Concepts documentation.
+
 Unit Tests
 ----------
+
+Templates should have unit tests that cover every line of code of their business logic. You may use any of the
+popular unit testing frameworks to implement the tests (mocha, chai, sinon etc). Please refer to the
+``acceptance-of-delivery`` template for an example template with unit tests.
 
 =============================
 Add a Template to a Library
@@ -66,7 +109,7 @@ Please see the CLI reference documentation for the ``cicero execute`` command.
 Node.js
 -------
 
-To execute a Clause you create an instance of the ``Engine` and then call ``execute`` on it, passing in the
+To execute a Clause you create an instance of the ``Engine`` and then call ``execute`` on it, passing in the
 clause and the transaction::
 
     // create the engine
