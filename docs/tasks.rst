@@ -1,5 +1,5 @@
 =============================
-Instantiate a Clause
+Instantiate a Smart Clause™
 =============================
 
 - Be awesome
