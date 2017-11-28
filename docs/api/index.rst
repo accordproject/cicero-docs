@@ -12,5 +12,5 @@ Contents
 
    
    module-cicero-core
-   module-@cicero-engine
+   module-cicero-engine
    

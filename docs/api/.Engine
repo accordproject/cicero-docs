@@ -1,9 +1,10 @@
-.. _undefined.Engine:
+.. _module-cicero-engine.Engine:
 
 =================
 Class: ``Engine``
 =================
 
+Member Of :doc:`module-cicero-engine`
 
 .. contents:: Local Navigation
    :local:
@@ -21,7 +22,7 @@ Description
 <p>Create the Engine.</p>
 
 
-.. _module-cicero-engine.Engine.compileClause:
+.. _module-cicero-engine.rst#.En.compileClause:
 
 
 Function: ``compileClause``
@@ -34,7 +35,7 @@ Function: ``compileClause``
     
     :param Clause clause: <p>the clause to compile</p>
     
-.. _module-cicero-engine.Engine.buildDispatchFunction:
+.. _module-cicero-engine.rst#.En.buildDispatchFunction:
 
 
 Function: ``buildDispatchFunction``
@@ -48,7 +49,7 @@ Function: ``buildDispatchFunction``
     :param Clause clause: <p>the clause to compile</p>
     :return string: <p>the Javascript code for dispatch</p>
     
-.. _module-cicero-engine.Engine.execute:
+.. _module-cicero-engine.rst#.En.execute:
 
 
 Function: ``execute``
@@ -64,11 +65,11 @@ Function: ``execute``
     :return Promise: <p>a promise that resolves to a result for the clause</p>
     
 
-.. _module-cicero-engine.Engine.scripts:
+.. _module-cicero-engine.rst#.En.scripts:
 
 Member: ``scripts``: 
 
-.. _module-cicero-engine.Engine.scripts[undefined]:
+.. _module-cicero-engine.rst#.En.scripts[undefined]:
 
 Member: ``scripts[undefined]``: 
 

@@ -1,9 +1,10 @@
-.. _undefined.Logger:
+.. _module-cicero-engine.Logger:
 
 =================
 Class: ``Logger``
 =================
 
+Member Of :doc:`module-cicero-engine`
 
 .. contents:: Local Navigation
    :local:

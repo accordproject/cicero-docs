@@ -33,10 +33,11 @@ Accord Project Cicero Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Reference
+   :caption: CLI and API Reference
 
    cli
-   api/*
+   api/module-cicero-core
+   api/module-cicero-engine
 
 Indices and tables
 ==================
