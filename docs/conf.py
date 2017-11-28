@@ -43,7 +43,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Accord Project, Cicero'
+project = u'Accord Cicero'
 copyright = u'2017, Clause Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
