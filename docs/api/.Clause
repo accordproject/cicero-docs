@@ -19,7 +19,7 @@ Children
 Description
 ===========
 
-<p>Create the Clause.</p>
+<p>Create the Clause and link it to a Template.</p>
 
 
 .. _module-cicero-core.rst#.Cl.setData:
@@ -33,7 +33,7 @@ Function: ``setData``
 .. js:function:: setData(data)
 
     
-    :param object data: <p>the data for the clause</p>
+    :param object data: <p>the data for the clause, must be an instance of the<br>template model for the clause's template</p>
     
 .. _module-cicero-core.rst#.Cl.getData:
 
@@ -47,7 +47,7 @@ Function: ``getData``
 
     
     :return object: <ul>
-    <li>the data for the clause</li>
+    <li>the data for the clause, or null if it has not been set</li>
     </ul>
     
 .. _module-cicero-core.rst#.Cl.parse:
@@ -69,7 +69,7 @@ Function: ``parse``
 Function: ``getIdentifier``
 ===========================
 
-<p>Returns the identifier for this clause</p>
+<p>Returns the identifier for this clause. The identifier is the identifier of<br>the template plus '-' plus a hash of the data for the clause (if set).</p>
 
 .. js:function:: getIdentifier()
 

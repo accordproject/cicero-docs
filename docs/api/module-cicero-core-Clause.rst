@@ -19,7 +19,7 @@ Children
 Description
 ===========
 
-<p>Create the Clause.</p>
+<p>Create the Clause and link it to a Template.</p>
 
 
 

@@ -23,6 +23,20 @@ Description
 <p><br><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from {@link Template}</strong><br></p>
 
 
+.. _module-cicero-core.Metadata._validName:
+
+
+Function: ``_validName``
+========================
+
+<p>check to see if it is a valid name. for some reason regex is not working when this executes<br>inside the chaincode runtime, which is why regex hasn't been used.</p>
+
+.. js:function:: _validName(name)
+
+    
+    :param string name: <p>the template name to check</p>
+    :return boolean: <p>true if valid, false otherwise</p>
+    
 .. _module-cicero-core.Metadata.getREADME:
 
 

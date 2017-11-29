@@ -23,7 +23,7 @@ Children
 Description
 ===========
 
-<p>Clause Core</p>
+<p>Cicero Core - defines the core data types for Cicero.</p>
 
 
 
