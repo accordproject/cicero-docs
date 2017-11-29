@@ -19,8 +19,7 @@ Children
 Description
 ===========
 
-<p>Create the Template.</p>
-<p><br><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from {@link Clause.fromArchive}</strong><br></p>
+<p>Create the Template.<br><strong>Note: Only to be called by framework code. Applications should<br>retrieve instances from {@link Template.fromArchive}.</p>
 
 
 
