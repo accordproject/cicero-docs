@@ -20,7 +20,7 @@ unit and system testing and code coverage analysis.
 Getting Involved
 ----------------
 
-Cicero is an Open Source, community led project. Please join the Accord Technology Working Group Slack
+Cicero is an Open Source, community led project. Please join the Accord Project Technology Working Group Slack
 channel by visiting http://accordproject.org.
 
 GitHub repository: https://github.com/accordproject/cicero
